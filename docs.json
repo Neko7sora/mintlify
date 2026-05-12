@@ -252,7 +252,7 @@
   },
   "logo": {
     "light": "/logo/light.svg",
-    "dark": "/logo/light.svg"
+    "dark": "/logo/dark.svg"
   },
   "navbar": {
     "links": [],
@@ -300,7 +300,7 @@
     "indexing": "all"
   },
   "search": {
-    "prompt": "a"
+    "prompt": " "
   },
   "styling": {
     "eyebrows": "section"
