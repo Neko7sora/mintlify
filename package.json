@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "mint": "mint"
+  },
+  "dependencies": {
+    "mint": "^4.2.559"
+  }
+}
