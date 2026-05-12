@@ -139,8 +139,7 @@
     }
   },
   "background": {
-    "image": "/images/1779092706c37050.png",
-    "decoration": "gradient"
+    "decoration": "grid"
   },
   "appearance": {
     "default": "system"
