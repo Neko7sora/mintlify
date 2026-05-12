@@ -1,22 +1,42 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Mintlify Docs",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#1b1a1b",
+    "light": "#4189f0",
+    "dark": "#03123a"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Projects",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "projects/overview"
+            ]
+          },
+          {
+            "group": "Repositories",
+            "pages": [
+              "projects/discord-tauri",
+              "projects/misskey-tauri",
+              "projects/discord-oauth2",
+              "projects/patches"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "mintlify Guides",
+        "hidden": true,
         "groups": [
           {
             "group": "Getting started",
             "pages": [
-              "index",
               "quickstart",
               "development"
             ]
@@ -52,27 +72,7 @@
         ]
       },
       {
-        "tab": "Projects",
-        "groups": [
-          {
-            "group": "Overview",
-            "pages": [
-              "projects/overview"
-            ]
-          },
-          {
-            "group": "Repositories",
-            "pages": [
-              "projects/discord-tauri",
-              "projects/misskey-tauri",
-              "projects/discord-oauth2",
-              "projects/patches"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
+        "tab": "mintlify EXAMPLE API reference",
         "groups": [
           {
             "group": "API documentation",
@@ -89,7 +89,8 @@
               "api-reference/endpoint/webhook"
             ]
           }
-        ]
+        ],
+        "hidden": true
       }
     ],
     "global": {
@@ -112,12 +113,7 @@
     "dark": "/logo/dark.svg"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
+    "links": [],
     "primary": {
       "type": "button",
       "label": "Dashboard",
@@ -138,9 +134,18 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/Neko7sora",
+      "github": "https://github.com/Neko7sora"
     }
+  },
+  "background": {
+    "image": "/images/1779092706c37050.png",
+    "decoration": "gradient"
+  },
+  "appearance": {
+    "default": "system"
+  },
+  "metadata": {
+    "timestamp": false
   }
 }
