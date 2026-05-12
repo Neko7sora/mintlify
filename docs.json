@@ -156,5 +156,14 @@
   },
   "seo": {
     "indexing": "all"
+  },
+  "search": {
+    "prompt": "a"
+  },
+  "styling": {
+    "eyebrows": "section"
+  },
+  "icons": {
+    "library": "lucide"
   }
 }
