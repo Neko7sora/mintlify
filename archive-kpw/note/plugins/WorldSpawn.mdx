@@ -1,0 +1,56 @@
+---
+title: WorldSpawn
+---
+<Danger>
+このページはアーカイブとして公開されています。記載内容は最新ではない可能性があります。
+</Danger>
+
+サーバー上の各ワールドにスポーンを設定できるようにします。
+
+## コマンド
+
+### /spawn
+
+Spawns the player to the world's spawn.
+
+### /setspawn
+
+Sets the world's spawn to where you stand. Adding true or false as an argument (e.g. /setspawn true) will override the "spawn-on-respawn" configuration for that world specifically.
+
+### /hub
+
+Warps to hub.
+
+### /spawnonrespawn
+
+Sets if the beds/anchors take priority. By setting this to true, the players will repawn in the world's spawn. If false, the player will spawn at their bed/anchor unless they don't have one.
+
+### /sethub
+
+Sets the hub location.
+
+### /linkspawn
+
+Links the world you are in to an other world's spawn.
+
+### /delspawn
+
+Deletes the world's spawn you specify or the one you are in.
+
+### /worldspawn
+
+reloads the configs and messages
+
+## Permissions
+
+- worldspawn.use
+  <br />
+  Allows the player to use /spawn and /hub
+
+- worldspawn.admin
+  <br />
+  Allows the player to use /setspawn, /sethub, /linkspawn, /delspawn
+
+- worldspawn.bypass.delay
+  <br />
+  Allows to bypass the spawn delay and instantly teleport using /spawn

@@ -119,6 +119,134 @@
           }
         ],
         "hidden": true
+      },
+      {
+        "tab": "Archive-KPW",
+        "icon": "archive",
+        "groups": [
+          {
+            "group": "概要",
+            "pages": [
+              "archive-kpw/index"
+            ]
+          },
+          {
+            "group": "KPW について",
+            "root": "archive-kpw/about/index",
+            "pages": [
+              "archive-kpw/about/rule",
+              "archive-kpw/about/q-a",
+              {
+                "group": "チーム",
+                "pages": [
+                  "archive-kpw/about/team/admin",
+                  "archive-kpw/about/team/moderator",
+                  "archive-kpw/about/team/op"
+                ]
+              },
+              {
+                "group": "コミュニティ",
+                "pages": [
+                  {
+                    "group": "Discord",
+                    "root": "archive-kpw/about/community/discord/index",
+                    "pages": [
+                      "archive-kpw/about/community/discord/rule"
+                    ]
+                  },
+                  {
+                    "group": "Minecraft",
+                    "root": "archive-kpw/about/community/minecraft/index",
+                    "pages": [
+                      "archive-kpw/about/community/minecraft/rule"
+                    ]
+                  },
+                  "archive-kpw/about/community/ark/index",
+                  "archive-kpw/about/community/tetris/tetr.io"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "マインクラフト",
+            "pages": [
+              {
+                "group": "生活鯖",
+                "pages": [
+                  "archive-kpw/minecraft/life/v1",
+                  "archive-kpw/minecraft/life/v2",
+                  "archive-kpw/minecraft/life/v3",
+                  "archive-kpw/minecraft/life/v4",
+                  "archive-kpw/minecraft/life/v5"
+                ]
+              },
+              {
+                "group": "Mod 鯖",
+                "pages": [
+                  "archive-kpw/minecraft/mod/v1",
+                  "archive-kpw/minecraft/mod/v2",
+                  "archive-kpw/minecraft/mod/v3",
+                  "archive-kpw/minecraft/mod/v4",
+                  "archive-kpw/minecraft/mod/v5"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "ノート",
+            "pages": [
+              {
+                "group": "Mod",
+                "pages": [
+                  "archive-kpw/note/mod/map",
+                  "archive-kpw/note/mod/optifine",
+                  "archive-kpw/note/mod/recipe",
+                  "archive-kpw/note/mod/untranslateditems"
+                ]
+              },
+              {
+                "group": "Plugins",
+                "expanded": false,
+                "pages": [
+                  "archive-kpw/note/plugins/ActionHealth",
+                  "archive-kpw/note/plugins/ArmorStandEditor",
+                  "archive-kpw/note/plugins/AutoWorldTools",
+                  "archive-kpw/note/plugins/Chairs",
+                  "archive-kpw/note/plugins/FastChunkPregenerator",
+                  "archive-kpw/note/plugins/HolographicDisplays",
+                  "archive-kpw/note/plugins/Images",
+                  "archive-kpw/note/plugins/LWC",
+                  "archive-kpw/note/plugins/MobStacker",
+                  "archive-kpw/note/plugins/MultiChat",
+                  "archive-kpw/note/plugins/NoMobGriefing",
+                  "archive-kpw/note/plugins/OpenInv",
+                  "archive-kpw/note/plugins/PlaceholderAPI",
+                  "archive-kpw/note/plugins/Plan",
+                  "archive-kpw/note/plugins/ProtocolLib",
+                  "archive-kpw/note/plugins/ServerUtils",
+                  "archive-kpw/note/plugins/SetHomes",
+                  "archive-kpw/note/plugins/Shopkeepers",
+                  "archive-kpw/note/plugins/SitEverywhere",
+                  "archive-kpw/note/plugins/SneakGrow",
+                  "archive-kpw/note/plugins/TabTPS",
+                  "archive-kpw/note/plugins/TerraformGenerator",
+                  "archive-kpw/note/plugins/UltimateTimber",
+                  "archive-kpw/note/plugins/VeinMiner",
+                  "archive-kpw/note/plugins/ViaBackwards",
+                  "archive-kpw/note/plugins/ViaVersion",
+                  "archive-kpw/note/plugins/Votifier",
+                  "archive-kpw/note/plugins/VotingPlugin",
+                  "archive-kpw/note/plugins/WorldEdit",
+                  "archive-kpw/note/plugins/WorldEditSelectionVisualizer",
+                  "archive-kpw/note/plugins/WorldGuard",
+                  "archive-kpw/note/plugins/WorldguardChecker",
+                  "archive-kpw/note/plugins/WorldguardPreventLwc",
+                  "archive-kpw/note/plugins/WorldSpawn"
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },

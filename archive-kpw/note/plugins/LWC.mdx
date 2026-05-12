@@ -1,0 +1,253 @@
+---
+title: LWC (LWCX)
+---
+<Danger>
+このページはアーカイブとして公開されています。記載内容は最新ではない可能性があります。
+</Danger>
+
+任意のブロックをロックするように構成できます。
+
+## コマンド
+
+### 保護の作成
+
+#### /cpublic
+
+Create a public protection
+Alias of /lwc -create public, or /lwc -c public
+Anyone can use a public protection, but no one can unlock it except for the owner.
+
+#### /cprivate
+
+Create a private protection
+Alias of /lock, /lwc -create private, or /lwc -c private
+Private means private: only you are able to access the protection unless you grant other users or groups access as well. This is done by adding them to the end of the command. You can add more than one user and/or group per command.
+When you prefix a user or group with an @, this user/group will be able to modify the protection to add or remove other users. They cannot disable the owner from modifying it.
+
+Examples:
+
+#### /lock
+
+creates a private protection for yourself
+
+#### /cprivate Hidendra g:moderator
+
+creates a private protection for yourself, Hidendra, and the moderator group
+
+#### /lwc -c private @pop4959
+
+creates a private protection for yourself, and pop4959, who may also modify the protection
+
+#### /cpassword
+
+Password-protect a block
+Alias of /lwc -create password, or /lwc -c password
+Every time you log in you need to re-enter the password to access the protection. Anyone who knows the password can access the protection.
+
+#### /cdonation
+
+Create a donation protection
+Alias of /lwc -create donation, or /lwc -c donation
+Anyone can put items inside the protection, but they cannot be taken back out.
+
+#### /cdisplay
+
+Create a display protection
+Alias of /lwc -create display, or /lwc -c display
+Anyone can view the protection's contents, but cannot modify them.
+
+### 保護の管理
+
+#### /cmodify
+
+Modify an existing protection
+Alias of /lwc -modify, or /lwc -m
+Each modification either grants access (by default), removes access (using -), or gives admin access (using @) on the protection. The target of the modification can be a player, a group (using g:[group]), or a town (using t:[town]). Several modifications can be made in a single command by separating each one with a space.
+
+Examples:
+
+#### /lwc -m pop4959 @Hidendra
+
+adds pop4959 to the protection, and Hidendra as protection admin
+
+#### /cmodify -Hidendra -pop4959 -MeGoesRawr
+
+removes access to the protection from Hidendra, pop4959, and MeGoesRawr
+
+#### /cmodify -g:member
+
+removes access to the protection for the "member" group (tested with Vault)
+
+#### /cmodify t:berlin
+
+grants access to the protection for all members of the town "berlin" (tested with Towny)
+
+#### /cremove
+
+Removes protection from a block
+Alias of /unlock, /lwc -remove, or /lwc -r
+
+#### /cunlock
+
+Unlock a password-protected block
+Alias of /lwc -unlock, or /lwc -u
+
+#### /cinfo
+
+Punch a protection to view information on it
+Alias of /lwc -info, or /lwc -i
+
+#### /climits
+
+View the number of protections you own, and the number you are allowed to create
+Alias of /lwc -info limits, or /lwc -i limits
+
+### 保護フラグ
+
+#### /credstone
+
+Toggles whether redstone should affect the protection
+Alias of /lwc flag redstone
+
+#### /cmagnet
+
+Put nearby dropped items into the protected chest (or other blocks with inventories)
+Alias of /lwc flag magnet
+
+#### /cautoclose
+
+Automagically close a protected door if it was opened
+Alias of /lwc flag autoclose
+
+#### /callowexplosions
+
+Allows the protected block to be destroyed by an explosion
+Alias of /lwc flag allowexplosions
+
+#### /chopper
+
+Controls whether or not hoppers can be used on a protected block
+Note: This flag is functionally equivalent to adding both hopperin + hopperout flags.
+Alias of /lwc flag hopper
+
+#### /lwc flag hopperin
+
+Controls whether or not hoppers can be used to place items into a protected block
+Note: This flag is not supported when using alternative hopper protection.
+
+#### /lwc flag hopperout
+
+Controls whether or not hoppers can be used to take items out of a protected block
+Note: This flag is not supported when using alternative hopper protection.
+
+#### /cexempt (admin-only)
+
+Protection is exempt from being auto removed from LWC
+Alias of /lwc flag exemption
+
+For more information read Protection Flags
+
+### ユーザーモード
+
+Persistent mode will let you perform your last action on several blocks without needing to re-type the command.
+
+#### /cpersist
+
+Turns on/off the persist mode
+Alias of /lwc mode persist
+
+Drop transfer mode makes dropped items automatically go to a designated chest.
+
+#### /cdroptransfer
+
+Alias of /lwc mode droptransfer
+
+#### /cdroptransfer select
+
+Select the chest drops go to
+
+#### /cdroptransfer [on/off]
+
+Enable/disable the droptransfer
+
+#### /cdroptransfer status
+
+Display the status of the droptransfer
+
+No lock mode will disable automatic protection creation.
+
+#### /cnolock
+
+Turns on/off the no-lock mode
+Alias of /lwc mode nolock
+
+No spam mode will disable protection creation messages.
+
+#### /cnospam
+
+Turns on/off the no-spam mode
+Alias of /lwc mode nospam
+
+### アドミンアクセス
+
+#### /lwc admin view
+
+View a protected inventory as if you were standing beside it using the protection's id.
+
+#### /lwc admin find
+
+View all protections created by a player
+
+#### /lwc admin forceowner
+
+Change the owner of a protection
+
+#### /lwc admin forceownerall
+
+Change the owner of all of a player's protections
+
+#### /lwc admin remove
+
+Remove a protection by using its id
+
+#### /lwc admin purge
+
+Remove all protections by a player
+
+#### /lwc admin cleanup
+
+Attempt to cleanup the database
+
+#### /lwc admin version
+
+View the loaded LWC version and the latest available
+
+#### /lwc admin update
+
+Update to the latest version of LWC
+
+#### /lwc admin report
+
+View the LWC performance report
+
+#### /lwc admin convert
+
+Convert another plugin's database to LWC
+
+#### /lwc admin clear
+
+Either removes all protections or all permissions from the protections
+
+#### /lwc admin reload
+
+Reload LWC config
+
+### その他
+
+#### /lwc history [player name]
+
+履歴を検索します。
+
+#### /lwc details [history id]
+
+`/lwc history` から取得した "history id" の詳細を表示します。

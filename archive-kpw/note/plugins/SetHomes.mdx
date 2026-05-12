@@ -1,0 +1,108 @@
+---
+title: SetHomes
+---
+<Danger>
+このページはアーカイブとして公開されています。記載内容は最新ではない可能性があります。
+</Danger>
+
+ワープ機能
+
+## コマンド
+
+### /sethome [名前] [説明]
+
+ワープ地点を登録
+
+### /home [名前]
+
+ワープ地点にワープ
+
+### /delhome [名前]
+
+ワープ地点を削除
+
+### /uhome &lt;名前&gt; &lt;説明&gt;
+
+ワープ地点を変更
+
+### /homes [プレイヤー名]
+
+一覧を表示
+
+---
+
+### /home-of [プレイヤー名] [名前]
+
+プレイヤーのワープ地点にワープ
+
+### /delhome-of [プレイヤー名] [名前]
+
+プレイヤーのワープ地点を削除
+
+### /uhome-of &lt;プレイヤー名&gt; &lt;名前&gt;
+
+プレイヤーのワープ地点を変更
+
+---
+
+### /blacklist [Add/Remove] [WorldName]
+
+ブラックリストにワールドを追加したり、ブラックリストからワールドを削除したりするために使用されます。他の引数が渡されない場合は、現在ブラックリストに登録されているすべてのワールドが一覧表示されます。
+
+### /setmax &lt;GroupName&gt; &lt;Amount&gt;
+
+特定の権限グループに対して許可されるホームの最大数を設定できます。たとえば、デフォルトの権限グループ 4 つのホームのみを許可する場合は、`/setmax default 4` を実行します。
+
+## Permissions
+
+- homes.\*
+  <br />
+  A player given this permission will be allowed all commands under the Set Homes plugin
+
+- homes.home
+  <br />
+  A player with this permission is allowed to teleport to named homes
+
+- homes.sethome
+  <br />
+  A player with this permission is allowed to set named homes
+
+- homes.blacklist_list
+  <br />
+  A player given this permission will be able to list worlds in the blacklist
+
+- homes.blacklist_add
+  <br />
+  A player given this permission will be able to add worlds to the blacklist
+
+- homes.blacklist_remove
+  <br />
+  A player given this permission will be able to remove worlds from the blacklist
+
+- homes.config_bypass
+  <br />
+  A player given this permission can set homes in blacklisted worlds, and doesn't have to wait for cooldown or teleport delays. They will also be able to exceed the max home limit.
+
+- homes.gethomes
+  <br />
+  Give the ability to list any players active homes
+
+- homes.home-of
+  <br />
+  Give the ability to teleport to one of any players active homes
+
+- homes.delhome-of
+  <br />
+  Give the ability to delete one of any players active homes
+
+- homes.uhome
+  <br />
+  Give the ability to update homes
+
+- homes.uhome-of
+  <br />
+  Give the ability to update other players homes
+
+- homes.setmax
+  <br />
+  Give the ability to set a maximum number of homes for a permission group
