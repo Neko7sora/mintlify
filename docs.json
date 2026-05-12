@@ -11,6 +11,14 @@
   "navigation": {
     "tabs": [
       {
+        "tab": "Home",
+        "groups": [
+          {
+            "group": "Introduction",
+          }
+        ]
+      },
+      {
         "tab": "Projects",
         "groups": [
           {
@@ -35,38 +43,44 @@
         "hidden": true,
         "groups": [
           {
+            "group": "Introduction",
+            "pages": [
+              "mintlify-guides/index"
+            ]
+          },
+          {
             "group": "Getting started",
             "pages": [
-              "quickstart",
-              "development"
+              "mintlify-guides/quickstart",
+              "mintlify-guides/development"
             ]
           },
           {
             "group": "Customization",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "mintlify-guides/essentials/settings",
+              "mintlify-guides/essentials/navigation"
             ]
           },
           {
             "group": "Writing content",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/components",
-              "essentials/reusable-snippets"
+              "mintlify-guides/essentials/markdown",
+              "mintlify-guides/essentials/code",
+              "mintlify-guides/essentials/images",
+              "mintlify-guides/essentials/components",
+              "mintlify-guides/essentials/reusable-snippets"
             ]
           },
           {
             "group": "Agent ready",
             "pages": [
-              "agent-ready/prompt",
-              "agent-ready/visibility",
-              "agent-ready/contextual",
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "mintlify-guides/agent-ready/prompt",
+              "mintlify-guides/agent-ready/visibility",
+              "mintlify-guides/agent-ready/contextual",
+              "mintlify-guides/ai-tools/cursor",
+              "mintlify-guides/ai-tools/claude-code",
+              "mintlify-guides/ai-tools/windsurf"
             ]
           }
         ],
@@ -91,16 +105,16 @@
           {
             "group": "API documentation",
             "pages": [
-              "api-reference/introduction"
+              "mintlify-guides/api-reference/introduction"
             ]
           },
           {
             "group": "Endpoint examples",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "mintlify-guides/api-reference/endpoint/get",
+              "mintlify-guides/api-reference/endpoint/create",
+              "mintlify-guides/api-reference/endpoint/delete",
+              "mintlify-guides/api-reference/endpoint/webhook"
             ]
           }
         ],
