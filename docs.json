@@ -163,7 +163,7 @@
     "default": "system"
   },
   "metadata": {
-    "timestamp": true
+    "timestamp": false
   },
   "interaction": {
     "drilldown": true
