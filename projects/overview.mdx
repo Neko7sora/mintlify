@@ -1,0 +1,48 @@
+---
+title: "Project overview"
+description: "Neko7sora の公開リポジトリの役割と読み始める順番をまとめます。"
+icon: "folder-open"
+---
+
+このセクションでは、Neko7sora の公開リポジトリから次の 4 つを扱います。
+
+<CardGroup cols={2}>
+  <Card title="discord-tauri" icon="discord" href="/projects/discord-tauri">
+    Discord 用の Tauri デスクトップアプリです。
+  </Card>
+  <Card title="misskey-tauri" icon="desktop" href="/projects/misskey-tauri">
+    Misskey 用の Tauri デスクトップアプリです。
+  </Card>
+  <Card title="Discord-Oauth2" icon="key" href="/projects/discord-oauth2">
+    Discord OAuth2 の認可フローを確認する Node.js コードです。
+  </Card>
+  <Card title="patches" icon="code-branch" href="/projects/patches">
+    `patch-package` で管理する依存パッケージ向けパッチ集です。
+  </Card>
+</CardGroup>
+
+## 使い分け
+
+| リポジトリ | 主な用途 | 技術スタック |
+| --- | --- | --- |
+| `discord-tauri` | Discord をデスクトップアプリとして扱う | Tauri、Vite、TypeScript |
+| `misskey-tauri` | Misskey をデスクトップアプリとして扱う | Tauri、Vite、TypeScript |
+| `Discord-Oauth2` | Discord OAuth2 の認証コード交換を試す | Node.js、Express、dotenv |
+| `patches` | npm 依存関係へローカルパッチを適用する | patch-package |
+
+## 読み始める順番
+
+1. Tauri アプリの構成を知りたい場合は、[`discord-tauri`](/projects/discord-tauri) または [`misskey-tauri`](/projects/misskey-tauri) から読みます。
+2. Discord OAuth2 の流れを確認したい場合は、[`Discord-Oauth2`](/projects/discord-oauth2) を読みます。
+3. 依存パッケージへの修正を共有したい場合は、[`patches`](/projects/patches) を読みます。
+
+<Note>
+  このドキュメントは 2026-05-12 時点の公開 GitHub リポジトリをもとに作成しています。
+</Note>
+
+## 対象リポジトリ
+
+- [Neko7sora/discord-tauri](https://github.com/Neko7sora/discord-tauri)
+- [Neko7sora/misskey-tauri](https://github.com/Neko7sora/misskey-tauri)
+- [Neko7sora/Discord-Oauth2](https://github.com/Neko7sora/Discord-Oauth2)
+- [Neko7sora/patches](https://github.com/Neko7sora/patches)

@@ -52,6 +52,26 @@
         ]
       },
       {
+        "tab": "Projects",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "projects/overview"
+            ]
+          },
+          {
+            "group": "Repositories",
+            "pages": [
+              "projects/discord-tauri",
+              "projects/misskey-tauri",
+              "projects/discord-oauth2",
+              "projects/patches"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "API reference",
         "groups": [
           {

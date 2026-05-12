@@ -1,0 +1,68 @@
+---
+title: "Discord-Oauth2"
+description: "Discord OAuth2 の認可コードフローを試す Node.js コードです。"
+icon: "key-round"
+---
+
+`Discord-Oauth2` は、Discord OAuth2 の認可コードフローを Express で確認するための Node.js コードです。認可 URL に移動し、コールバックで受け取った `code` を使ってアクセストークンを取得します。
+
+<Card title="GitHub repository" icon="github" href="https://github.com/Neko7sora/Discord-Oauth2">
+  ソースコードを GitHub で確認できます。
+</Card>
+
+## 主な役割
+
+- Discord の OAuth2 認可 URL にリダイレクトします。
+- `/callback` で認可コードを受け取ります。
+- Discord のトークンエンドポイントへ `authorization_code` を送信します。
+- 取得したアクセストークンをレスポンスとして返します。
+
+## 必要な環境変数
+
+`.env` に Discord アプリケーションの値を設定します。
+
+| 変数 | 内容 |
+| --- | --- |
+| `CLIENT_ID` | Discord Developer Portal のアプリケーション ID |
+| `CLIENT_SECRET` | Discord アプリケーションのクライアントシークレット |
+| `REDIRECT_URI` | Discord 側に登録したリダイレクト URI |
+
+```bash
+CLIENT_ID=your-client-id
+CLIENT_SECRET=your-client-secret
+REDIRECT_URI=http://localhost:3000/callback
+```
+
+<Warning>
+  `CLIENT_SECRET` を Git にコミットしないでください。`.env` はローカル環境だけで管理します。
+</Warning>
+
+## セットアップ
+
+```bash
+git clone https://github.com/Neko7sora/Discord-Oauth2.git
+cd Discord-Oauth2
+npm install
+```
+
+## 起動
+
+```bash
+node app.js
+```
+
+ブラウザーで `http://localhost:3000` を開くと、Discord の認可画面へ移動します。
+
+## OAuth2 の流れ
+
+1. ルートパス `/` が Discord の認可 URL を作成します。
+2. ユーザーが Discord で認可します。
+3. Discord が `REDIRECT_URI` の `/callback` に `code` を付けて戻します。
+4. アプリが `code`、`CLIENT_ID`、`CLIENT_SECRET` を使ってアクセストークンを取得します。
+5. アプリがトークンレスポンスを表示します。
+
+## 確認ポイント
+
+- Discord Developer Portal の Redirect URI と `.env` の `REDIRECT_URI` を一致させます。
+- 本番で使う場合は、トークンレスポンスを画面に直接表示しない構成に変更します。
+- 必要なスコープだけを認可 URL に含めます。

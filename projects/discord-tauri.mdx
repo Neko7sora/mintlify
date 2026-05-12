@@ -1,0 +1,68 @@
+---
+title: "discord-tauri"
+description: "Discord を Tauri デスクトップアプリとして扱うリポジトリの概要です。"
+icon: "discord"
+---
+
+`discord-tauri` は、Discord 向けの Tauri デスクトップアプリです。フロントエンドは Vite と TypeScript で構成されています。
+
+<Card title="GitHub repository" icon="github" href="https://github.com/Neko7sora/discord-tauri">
+  ソースコードと README を GitHub で確認できます。
+</Card>
+
+## 主な役割
+
+- Discord をデスクトップアプリとして起動します。
+- Tauri のネイティブシェルと Web フロントエンドを組み合わせます。
+- Vite の開発サーバーを使って UI を開発します。
+
+## 技術スタック
+
+| 項目 | 内容 |
+| --- | --- |
+| アプリ基盤 | Tauri |
+| フロントエンド | Vite、TypeScript |
+| パッケージ管理 | npm |
+| 設定 | `src-tauri/tauri.conf.json`、`vite.config.ts` |
+
+## セットアップ
+
+リポジトリをクローンして依存関係をインストールします。
+
+```bash
+git clone https://github.com/Neko7sora/discord-tauri.git
+cd discord-tauri
+npm install
+```
+
+## 開発
+
+Tauri の開発モードでアプリを起動します。
+
+```bash
+npm run tauri dev
+```
+
+Vite の Web フロントエンドだけを確認する場合は、次のコマンドを使います。
+
+```bash
+npm run dev
+```
+
+## ビルド
+
+配布用アプリを作成します。
+
+```bash
+npm run tauri build
+```
+
+<Tip>
+  Tauri のビルドには Rust と OS ごとのビルドツールが必要です。ビルドが失敗した場合は、Tauri の前提条件を先に確認してください。
+</Tip>
+
+## 関連ファイル
+
+- `package.json`: npm scripts とフロントエンド依存関係を管理します。
+- `src-tauri/`: Tauri アプリ本体の設定と Rust 側のコードを置きます。
+- `src/`: Vite が扱うフロントエンドコードを置きます。

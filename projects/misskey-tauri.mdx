@@ -1,0 +1,60 @@
+---
+title: "misskey-tauri"
+description: "Misskey を Tauri デスクトップアプリとして扱うリポジトリの概要です。"
+icon: "monitor"
+---
+
+`misskey-tauri` は、Misskey 向けの Tauri デスクトップアプリです。`discord-tauri` と同じく、Vite と TypeScript を使ってフロントエンドを構成します。
+
+<Card title="GitHub repository" icon="github" href="https://github.com/Neko7sora/misskey-tauri">
+  ソースコードと README を GitHub で確認できます。
+</Card>
+
+## 主な役割
+
+- Misskey をデスクトップアプリとして起動します。
+- Tauri で軽量なネイティブアプリとして配布します。
+- Web 技術で UI を開発しながら、デスクトップ環境へ組み込みます。
+
+## 技術スタック
+
+| 項目 | 内容 |
+| --- | --- |
+| アプリ基盤 | Tauri |
+| フロントエンド | Vite、TypeScript |
+| パッケージ管理 | npm |
+| 設定 | `src-tauri/tauri.conf.json`、`vite.config.ts` |
+
+## セットアップ
+
+```bash
+git clone https://github.com/Neko7sora/misskey-tauri.git
+cd misskey-tauri
+npm install
+```
+
+## 開発
+
+Tauri の開発モードでアプリを起動します。
+
+```bash
+npm run tauri dev
+```
+
+Vite の開発サーバーだけを起動する場合は、次のコマンドを使います。
+
+```bash
+npm run dev
+```
+
+## ビルド
+
+```bash
+npm run tauri build
+```
+
+## 運用メモ
+
+- Misskey インスタンスの URL を固定している場合は、設定ファイルや起動時の読み込み先を確認します。
+- Tauri の許可設定を変更した場合は、`src-tauri/tauri.conf.json` をレビューします。
+- Web 側とネイティブ側の境界を変更した場合は、開発モードとビルド後の両方で動作を確認します。

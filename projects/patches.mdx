@@ -1,0 +1,66 @@
+---
+title: "patches"
+description: "patch-package で依存パッケージへの修正を管理するリポジトリです。"
+icon: "code-branch"
+---
+
+`patches` は、npm パッケージに対するローカルパッチを管理するためのリポジトリです。`patch-package` 形式の `.patch` ファイルを保存し、依存関係の修正を再適用できるようにします。
+
+<Card title="GitHub repository" icon="github" href="https://github.com/Neko7sora/patches">
+  パッチファイルを GitHub で確認できます。
+</Card>
+
+## 主な役割
+
+- npm 依存パッケージへの修正を `.patch` ファイルとして共有します。
+- `node_modules` を直接編集した変更を再現可能にします。
+- アプリ側の `postinstall` でパッチを自動適用できる形にします。
+
+## 収録パッチ
+
+| パッチ | 対象 |
+| --- | --- |
+| `npm/glob-watcher@5.0.5.patch` | `glob-watcher` バージョン `5.0.5` |
+
+## 使い方
+
+対象プロジェクトに `patch-package` を追加します。
+
+```bash
+npm install --save-dev patch-package
+```
+
+`package.json` に `postinstall` を追加します。
+
+```json
+{
+  "scripts": {
+    "postinstall": "patch-package"
+  }
+}
+```
+
+パッチファイルを対象プロジェクトの `patches/` ディレクトリに配置します。
+
+```text
+patches/
+└── glob-watcher+5.0.5.patch
+```
+
+<Note>
+  `patch-package` のファイル名では、パッケージ名とバージョンの区切りに `+` を使います。リポジトリ上のファイル名と配置先の命名規則が異なる場合は、対象プロジェクトの `patch-package` 形式に合わせてください。
+</Note>
+
+## 更新手順
+
+1. 対象プロジェクトで依存パッケージをインストールします。
+2. `node_modules` 内の対象ファイルを編集します。
+3. `npx patch-package <package-name>` を実行します。
+4. 生成された `.patch` ファイルをレビューします。
+5. パッチをコミットします。
+
+## 確認ポイント
+
+- 依存パッケージのバージョンを固定します。
+- パッチの対象ファイルと変更理由を PR やコミットに残します。
+- 依存パッケージを更新したら、パッチがまだ必要か確認します。
